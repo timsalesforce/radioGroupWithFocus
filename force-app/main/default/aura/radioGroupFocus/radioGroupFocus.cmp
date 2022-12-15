@@ -1,0 +1,12 @@
+<aura:component implements="force:lightningQuickAction">
+    <aura:attribute name="options" type="List" default="[{value: 'one', label: 'one'}, {value: 'two', label: 'two'}, {value: 'three', label: 'three'}]"/>
+    <aura:attribute name="firstRender" type="Boolean" default="true"/>
+    <aura:handler event="aura:doneRendering" action="{!c.doneRendering}"/>
+    <div>
+        <lightning:radioGroup aura:id="radioGroup" name="radioGroup"
+            label="Focused"
+            options="{!v.options}"
+            type="radio"
+            required="true"/>
+    </div>
+</aura:component>
