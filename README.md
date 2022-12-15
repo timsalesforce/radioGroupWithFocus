@@ -9,7 +9,11 @@ In this repro, the weirdness is not as pronounced as in the Health Cloud Repro (
 - On the Account Record Page, click on the "FocusedRadio" quick action button
 - Observe the radio group rendered in the modal
 - Click anywhere, but not on a radio button
-- See that the error message is shown for a short time, even though the radio button is selected
+- See that the error message is shown
+- Dismiss the modal
+- Click "FocusRadio" again
+- Click on a radio button
+- See that the error message is shown for a short time, even though there is a selection
 
 In the health cloud org, which doesn't use quick actions, but a home-grown slds-modal solution, even clicking on the input button while the radio group was in focus did not register the change.  You had to click very close to the top of the radio button, or wait until the message appeared, and then select the radio button.
 
